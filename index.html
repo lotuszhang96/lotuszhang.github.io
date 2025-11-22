@@ -15,70 +15,216 @@ Notes:
 
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Letao Zhang — Chinese–English Clinical Interpreter | 张乐陶 - 临床口译</title>
-  <meta name="description" content="Letao Zhang — Chinese–English Clinical Interpreter. Clinical, legal and educational interpreting expertise. / 中文-英文 临床口译，具备临床、法律和教育口译经验。">
+  <meta name="description"
+    content="Letao Zhang — Chinese–English Clinical Interpreter. Clinical, legal and educational interpreting expertise. / 中文-英文 临床口译，具备临床、法律和教育口译经验。">
 
   <!-- Inline playful colorful CSS -->
   <style>
-    :root{
+    :root {
       --bg: #fff;
-      --muted:#556;
-      --accent1:#FF7043; /* orange */
-      --accent2:#42A5F5; /* blue */
-      --accent3:#66BB6A; /* green */
-      --card:#fbfbff;
-      --glass: rgba(255,255,255,0.6);
+      --muted: #556;
+      --accent1: #FF7043;
+      /* orange */
+      --accent2: #42A5F5;
+      /* blue */
+      --accent3: #66BB6A;
+      /* green */
+      --card: #fbfbff;
+      --glass: rgba(255, 255, 255, 0.6);
       font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:linear-gradient(120deg, #fff 0%, #f6fbff 100%);color:#123;}
-    header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:30;background:linear-gradient(90deg, rgba(255,255,255,0.72), rgba(255,255,255,0.6));border-bottom:1px solid rgba(18,30,50,0.06)}
-    .container{max-width:1000px;margin:0 auto;padding:28px}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px}
-    nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:36px 0}
-    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
 
-    h1{margin:0;font-size:28px}
-    .headline{color:var(--accent2);font-weight:700}
-    .muted{color:var(--muted)}
+    * {
+      box-sizing: border-box
+    }
 
-    .bio p{line-height:1.6}
-    .sr-list{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .chip{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));border:1px solid rgba(18,30,50,0.04);font-weight:600}
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(120deg, #fff 0%, #f6fbff 100%);
+      color: #123;
+    }
+
+    header {
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.6));
+      border-bottom: 1px solid rgba(18, 30, 50, 0.06)
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 28px
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 22px
+    }
+
+    nav a {
+      margin-left: 12px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: center;
+      padding: 24px 0
+    }
+
+    .card {
+      background: var(--card);
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06)
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px
+    }
+
+    .headline {
+      color: var(--accent2);
+      font-weight: 700
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .bio p {
+      line-height: 1.6
+    }
+
+    .sr-list {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+      border: 1px solid rgba(18, 30, 50, 0.04);
+      font-weight: 600
+    }
 
     /* sections */
-    section{padding:48px 0}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .edu, .exp{display:flex;flex-direction:column;gap:12px}
+    section {
+      padding: 12px 0
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px
+    }
+
+    .edu,
+    .exp {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
 
     /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px
+    }
 
-    footer{padding:24px 0;text-align:center;color:var(--muted);font-size:13px}
+    .gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px
+    }
+
+    footer {
+      padding: 24px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px
+    }
 
     /* responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      .gallery{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:880px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr)
+      }
     }
-    @media (max-width:480px){
-      .gallery{grid-template-columns:1fr}
+
+    @media (max-width:480px) {
+      .gallery {
+        grid-template-columns: 1fr
+      }
     }
 
     /* small callouts */
-    .accent{color:var(--accent1);font-weight:700}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .accent {
+      color: var(--accent1);
+      font-weight: 700
+    }
 
-    .lang-toggle{font-size:13px;color:var(--muted)}
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700
+    }
+
+    .lang-toggle {
+      font-size: 13px;
+      color: var(--muted)
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -106,11 +252,14 @@ Notes:
       <div>
         <div class="card">
           <h1>Letao Zhang <span class="headline">— Chinese–English Clinical Interpreter</span></h1>
-          <p class="muted" style="margin-top:8px">Clinical, legal and educational interpreting expertise. 具备临床、法律和教育口译经验。</p>
+          <p class="muted" style="margin-top:8px">Clinical, legal and educational interpreting expertise.
+            具备临床、法律和教育口译经验。</p>
 
           <div class="bio" style="margin-top:16px">
             <p><strong>About / 关于</strong></p>
-            <p>I am a professional Chinese-English Interpreter with experience in clinical, legal, and educational settings. I deliver accurate, confidential interpretations under pressure while maintaining cultural sensitivity and patient-centered communication.</p>
+            <p>I am a professional Chinese-English Interpreter with experience in clinical, legal, and educational
+              settings. I deliver accurate, confidential interpretations under pressure while maintaining cultural
+              sensitivity and patient-centered communication.</p>
             <p>我是一名专业的中英口译员，拥有临床、法律和教育领域的口译经验。能够在高压和保密环境中保持准确传译，注重文化敏感性与以病人为中心的沟通。</p>
 
             <div class="sr-list">
@@ -140,7 +289,9 @@ Notes:
     <section id="work">
       <div class="card">
         <h2>Work Experience / 工作经历</h2>
-        <p class="muted">5 years of professional interpreting experience across hospitals, legal proceedings, and educational settings. Trained in medical terminology, patient confidentiality (HIPAA-aware), and consecutive & simultaneous interpreting techniques.</p>
+        <p class="muted">5 years of professional interpreting experience across hospitals, legal proceedings, and
+          educational settings. Trained in medical terminology, patient confidentiality (HIPAA-aware), and consecutive &
+          simultaneous interpreting techniques.</p>
         <p class="muted">拥有5年专业口译经验，覆盖医院、法律程序和教育场景。熟悉医学术语、病患保密要求（HIPAA意识）以及交替与同声传译技巧。</p>
 
         <div style="margin-top:12px" class="grid-2">
@@ -178,7 +329,8 @@ Notes:
     <section id="contact">
       <div class="card">
         <h2>Contact / 联系方式</h2>
-        <p class="muted">Available for clinical, legal, and educational interpreting assignments. For booking or inquiries, reach out via the channels below.</p>
+        <p class="muted">Available for clinical, legal, and educational interpreting assignments. For booking or
+          inquiries, reach out via the channels below.</p>
         <p class="muted">可承接临床、法律及教育口译任务。如需预约或咨询，请通过以下方式联系。</p>
 
         <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
@@ -192,7 +344,8 @@ Notes:
     </section>
 
     <footer>
-      <div class="muted">© <strong>Letao Zhang</strong> — Chinese–English Clinical Interpreter • 张乐陶 • Last updated: <!-- Insert date here -->
+      <div class="muted">© <strong>Letao Zhang</strong> — Chinese–English Clinical Interpreter • 张乐陶 • Last updated:
+        <!-- Insert date here -->
       </div>
     </footer>
   </main>
@@ -200,22 +353,23 @@ Notes:
   <!-- Minimal JS for smooth scroll and small interactions -->
   <script>
     // Smooth scrolling for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
         e.preventDefault();
         const id = a.getAttribute('href');
         const el = document.querySelector(id);
-        if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); }
+        if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       })
     })
 
     // If images are missing, use colored placeholders (so preview looks good)
-    document.querySelectorAll('img').forEach(img=>{
-      img.onerror = ()=>{
+    document.querySelectorAll('img').forEach(img => {
+      img.onerror = () => {
         img.style.background = 'linear-gradient(135deg,var(--accent1),var(--accent2))';
         img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24" fill="#ffffff">Placeholder</text></svg>');
       }
     })
   </script>
 </body>
+
 </html>
